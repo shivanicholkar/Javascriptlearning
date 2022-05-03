@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Push-Pop</title>
+
+<script>
+   var item = ["shivani" , 10, 20,30, "Amit"];
+
+   function DisplayItem(){
+
+    var n = item.length;
+
+    document.getElementById("Counts").innerHTML = "add Item " + n.toString();
+
+    var Items = document.getElementById("Items");
+
+    while(Items.hasChildNodes()){
+        Items.removeChild|(Items.lastChild)
+
+    }
+    for(var i=0; i<n; i++){
+
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML = ;
+        Items.appendChild(newDiv);
+
+    }
+   }
+
+
+  function pushMyValue(){
+   
+    var a = document.getElementById("textinput").value;
+  }
+
+
+  function PopMyValue(){
+      
+    }
+
+
+  function unshiftvalue(){
+      
+    }
+
+    function shiftvalue(){
+      
+    }
+</script>
+
+</head>
+<body>
+  <table>
+      <tr>
+          <td>
+              Enter your Value:
+          </td>
+          
+          <td>
+              <input id="textinput" type="text">
+          </td>
+
+          <td>
+              <input id="push" type="button" value="push(enter value)" onclick="pushMyValue()">
+          </td>
+
+          <td>
+            <input id="pop" type="button" value="pop(enter value)" onclick="PopMyValue()">
+        </td>
+
+        <td>
+            <input id="unshift" type="button" value="unshift" onclick="unshiftvalue()">
+        </td>
+
+        <td>
+            <input id="shift" type="button" value="shift" onclick="shiftvalue()">
+        </td>
+
+        </tr>
+  </table>
+  <hr>
+       <div id="Counts"></div><br>
+
+        <div id="Items"></div><br>
+
+</body>
+</html>

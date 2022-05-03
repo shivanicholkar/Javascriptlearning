@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AssociativeArray</title>
+
+<script>
+    var itm = [];
+    itm["Empid"] = 12344; //Any Array which have string type indexes calles Associative Array;
+    itm["Salary"] = 50500;
+    itm["Location"] = "indore";
+    itm["Department"] = "DataScience";
+
+    function DisplayData(){
+        
+        var ResultingDataContant = document.getElementById("ResultingDataContant");
+
+        for(k in itm){
+        
+            var NewDiv = document.createElement("div");
+            NewDiv.innerHTML = k + " ; " + itm[k];
+
+            ResultingDataContant.appendChild (NewDiv); // add something to the end of documentations 
+            
+        }
+
+    }
+
+</script>
+</head>
+<body>
+
+    <input type="butoon" value="showData" onclick="DisplayData()" style="text-align: center; background-color: aqua; color: blue; cursor:grab;">
+    <hr>
+
+    <div id="ResultingDataContant"></div>
+
+</body>
+</html>

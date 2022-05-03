@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AddArray</title>
+
+<script>
+    var list = [];
+
+    function AddArrayItems(){
+
+        var NoOfElements = list.length;
+
+        list[NoOfElements] = document.getElementById("textvalue").value;
+        
+        DisplayResult();
+    }
+    
+    function DisplayResult(){
+       
+        var n = list.length;
+
+        document.getElementById("ItemsCount").innerHTML= "value added:" + n.toString();
+
+        var ItemsListDiv = document.getElementById("ItemsList");
+
+        while (ItemsListDiv.hasChildNodes()) {
+            ItemsListDiv.removeChild(ItemsListDiv.lastChild);
+        }
+
+
+        for (var i = 0; i < n; i++ ){
+
+            var NewDiv = document.createElement("div");
+
+            NewDiv.innerHTML = "item " + (i + 1).toString() + " 0f " + n.toString() + " are " + list[i];
+
+            ItemsListDiv.appendChild(NewDiv);
+        }
+    }
+    
+</script>
+
+</head>
+<body>
+  <table>
+      <tr>
+          <td>
+              Enter Your Value:
+          </td>
+          
+          <td>
+              <input id="textvalue" type="text">
+          </td>
+      </tr>
+
+      <tr>
+          <td>
+
+          </td>
+
+          <td>
+              <input id="Value" type="button" value="Additem" onclick="AddArrayItems();">
+          </td>
+      </tr>
+  </table>
+  <hr>
+
+  <div id="ItemsCount"></div>
+  <div id="ItemsList"></div>
+</body>
+</html>

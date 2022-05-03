@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Practice</title>
+
+<script>
+  var Timeout = setTimeout(Timeout , 1000);
+  var interval = setInterval(Interval , 1000);
+
+  function Timeout(){
+      document.getElementById("Demo").innerHTML = "WelCome";
+  }
+
+  function Interval(){
+      document.getElementById("Demo1").innerHTML += " Hellow &nbsp;"; 
+     
+  }
+  function parse(){
+     document.getElementById("parseMethod").innerHTML =   parseInt("10") + "<br>" + parseInt("40.7") + "<br>"+ 
+     parseInt("shivani");
+     
+  }
+
+
+  function deleteMe(){
+          var person = {
+          name: "shivani",
+          wifeof: "amit",
+          age: 27,
+          surname: "cholkar"
+    };
+    delete person.age;
+      document.getElementById("delete").innerHTML = person.name + " wife of " + person.wifeof  + " her age is " +  person.age
+      + " and surname is " +  person.surname;
+  }
+
+  function alertBox(){
+      alert("hey Your work is successfull");
+  }
+
+</script>
+</body>
+  <div id="Demo"></div><hr>
+
+  <div id="Demo1"></div><hr>
+
+  <input type="button" value="parse" onclick="parse()">
+  <div id="parseMethod"></div><hr>
+
+  <h2>Delete operator</h2>
+  <input type="button" value="delete me" onclick="deleteMe()">
+  <div id="delete"></div><hr>
+
+  <button onclick="alertBox()">Lets Try Alert Box</button>
+</body>
+</html>

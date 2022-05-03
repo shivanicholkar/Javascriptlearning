@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+    var arry = Array(5);
+    arry[0] = "arry0";
+    arry[1] = "arry1";
+    arry[2] = "arry2";
+    arry[3] = "arry3";
+    arry[4] = "arry4";
+
+    function ArrayCalling(){
+
+        var n = arry.length;
+
+        var ResultDiv = document.getElementById("ResultDiv");
+
+        for(var i=0; i<n; i++){
+         var newDiv = document.createElement("div");
+         newDiv.innerHTML = "item" +(i + 1).toString() + "of" + n.toString() + "is" + arry[i];
+         ResultDiv.appendChild(newDiv); 
+        }
+    }
+</script>
+</head>
+<body>
+  <input type="button" value="MyArray" onclick="ArrayCalling()"/>
+<hr/>
+  <div id="ResultDiv"></div>
+</body>
+</html>

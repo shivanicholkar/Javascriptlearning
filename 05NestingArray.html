@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nesting Array</title>
+
+<script>
+
+  var emp1 = [];
+  emp1["EmpName"] = "shivani";
+  emp1["Empid"] = 101;
+  emp1["Company Name"] = "CtrlF5";
+  emp1["Address"] = "120/B";
+
+  var emp2 = [];
+  emp1["EmpName"] = "Amit";
+  emp2["Empid"] = 102;
+  emp2["Company Name"] = "TCS";
+  emp2["Address"] = "123/B";
+
+  var emp3 = [];
+  emp3["EmpName"] = "sumit";
+  emp3["Empid"] = 103;
+  emp3["Company Name"] = "ABC";
+  emp3["Address"] = "120000/B";
+
+  var emp4 = [];
+  emp4["EmpName"] = "Vaanya";
+  emp4["Empid"] = 104;
+  emp4["Company Name"] = "CtrlF5";
+  emp4["Address"] = "234/B";
+
+  var emps = [emp1 , emp2 , emp3 , emp4];
+
+  function DisplayArray(){
+
+    var n = emps.length;
+
+     var ResultingArray = document.getElementById("ResultingArray");
+
+     for(var i= 0; i<n; i++){
+        
+        var emp = emps[i];
+         
+        for(var key in emp){
+         
+            var NewDiv = document.createElement("div");
+
+            NewDiv.innerHTML= key + " ; " + emp[key];
+
+            ResultingArray.appendChild(NewDiv);
+
+        }
+
+        var NewBr = document.createElement("br")
+        ResultingArray.appendChild(NewBr);
+
+     }
+
+
+  }
+
+</script>
+
+</head>
+<body>
+  <input type="button" value="Nwsting Array Data" onclick="DisplayArray()"/>
+<hr/>
+
+  <div id="ResultingArray"></div>
+
+</body>
+</html>

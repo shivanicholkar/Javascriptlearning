@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ArrayDeclarations</title>
+
+<script>
+    var ar1 = Array(5); //to use define no of array 
+    ar1[0] = "chat0";
+    ar1[1] = "chat1";
+    ar1[2]= "chat2";
+    ar1[3]= "chat3";
+    ar1[4]= "chat4";
+    
+
+    var ar2 = Array("chat" , "chat2"  , "chat3"  ,  "chat4");
+
+    var ar3 = ["shivani" , "amit" , "count", "next"];
+
+    var ar4 = [];
+    ar4[0] = "chat";
+    ar4[1] = "Day";
+    ar4[2] = "Monday";
+
+
+    function ArrayDeclarations(ary){
+
+     var n = ary.length;
+
+     var ResultingArrayItems = document.getElementById("ResultingArrayItems");
+     
+     while (ResultingArrayItems.hasChildNodes()) {
+        ResultingArrayItems.removeChild(ResultingArrayItems.lastChild)
+     }
+
+     for(var i = 0; i< n; i++){
+  
+        var NewDiv =  document.createElement("div");
+
+        NewDiv.innerHTML = " item " + (i+1).toString() + " of " + n.toString() + " are " +  ary[i]; 
+
+        ResultingArrayItems.appendChild(NewDiv);
+         
+     }
+    }
+
+</script>
+</head>
+<body>
+
+ <input type="button" value="Array 1" onclick="ArrayDeclarations(ar1)">
+ <input type="button" value="Array 2" onclick="ArrayDeclarations(ar2)">
+ <input type="button" value="Array 3" onclick="ArrayDeclarations(ar3)">
+ <input type="button" value="Array 4" onclick="ArrayDeclarations(ar4)">
+ <hr>
+
+<div id="ResultingArrayItems"></div>
+</body>
+</html>
